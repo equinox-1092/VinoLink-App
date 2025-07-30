@@ -1,0 +1,45 @@
+{
+  "title": "VinoLink",
+  "welcome": {
+    "title": "Bienvenido a VinoLink",
+    "subtitle": "Crea una cuenta para empezar",
+    "button": "Crear una cuenta"
+  },
+  "login": {
+    "title": "Iniciar sesión",
+    "user": "Usuario",
+    "userPlaceholder": "Introduce tu nombre de usuario en la app",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "Introduce tu correo electrónico",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Introduce tu contraseña",
+    "remember": "Recordarme",
+    "submit": "Iniciar sesión",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "account": "o continuar con",
+    "titleRegister": "Hola, bienvenido a VinoLink",
+    "subtitleRegister": "Regístrate con tu cuenta personal para usar todas las funciones de la herramienta",
+    "buttonRegister": "Registrarse"
+  },
+  "register": {
+    "title": "Crear una cuenta",
+    "name": "Nombre",
+    "namePlaceholder": "Introduce tu nombre",
+    "user": "Usuario",
+    "userPlaceholder": "Introduce tu nombre de usuario en la app",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "Introduce tu correo electrónico",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Introduce tu contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "confirmPasswordPlaceholder": "Confirma tu contraseña",
+    "role": "Rol",
+    "rolePlaceholder": "Selecciona tu rol",
+    "roleOptions": ["Usuario", "Productor", "Proveedor"],
+    "subtitle": "La contraseña debe tener un mínimo de 8 caracteres",
+    "submit": "Registrarse",
+    "options": "¿Ya tienes una cuenta?",
+    "buttonLogin": "Iniciar sesión",
+    "account": "o continuar con"
+  }
+}
