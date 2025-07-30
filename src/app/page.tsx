@@ -1,12 +1,12 @@
 "use client";
 
-import { RegisterForm } from "@/components/RegisterForm";
+import { AuthLayout } from "./auth/layout";
 
 export default function Home() {
   
   return (
     <main className="min-h-screen p-4"> 
-      <RegisterForm />
+      <AuthLayout/>
     </main>
   );
 }

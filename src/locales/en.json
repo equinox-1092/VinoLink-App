@@ -6,27 +6,27 @@
     "button": "Create an account"
   },
   "login": {
-    "title": "Login",
+    "title": "Sign In",
     "user": "User",
-    "userPlaceholder": "Enter your user name in the app",
+    "userPlaceholder": "Enter your user name",
     "email": "Email",
     "emailPlaceholder": "Enter your email",
     "password": "Password",
     "passwordPlaceholder": "Enter your password",
     "remember": "Remember me",
-    "submit": "Login",
+    "submit": "Sign In",
     "forgotPassword": "Forgot Password?",
     "account": "or continue with",
     "titleRegister": "Hi, welcome to VinoLink",
     "subtitleRegister": "Register with your personal account to use all the features of the tool",
-    "buttonRegister": "Register"
+    "buttonRegister": "Sign Up"
   },
   "register": {
     "title": "Create an Account",
     "name": "Name",
     "namePlaceholder": "Enter your name",
     "user": "User",
-    "userPlaceholder": "Enter your user name in the app",
+    "userPlaceholder": "Enter your user name",
     "email": "Email",
     "emailPlaceholder": "Enter your email",
     "password": "Password",
@@ -37,9 +37,10 @@
     "rolePlaceholder": "Select your role",
     "roleOptions": ["User", "Producer", "Provider"],
     "subtitle": "Password must have a minimum of 8 characters",
-    "submit": "Register",
-    "options": "Already have an account?",
-    "buttonLogin": "Login",
+    "submit": "Sign Up",
+    "titleRegister": "Hi, welcome to VinoLink",
+    "options": "Enter your personal details to use all of the app features",
+    "buttonLogin": "Sign In",
     "account": "or continue with"
   }
 }
