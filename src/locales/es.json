@@ -3,7 +3,8 @@
   "welcome": {
     "title": "Bienvenido a VinoLink",
     "subtitle": "Crea una cuenta para empezar",
-    "button": "Crear una cuenta"
+    "button": "Crear una cuenta",
+    "author": "Equinox 1092"
   },
   "login": {
     "title": "Iniciar sesión",
