@@ -17,8 +17,8 @@
     "submit": "Sign In",
     "forgotPassword": "Forgot Password?",
     "account": "or continue with",
-    "titleRegister": "Hi, welcome to VinoLink",
-    "subtitleRegister": "Register with your personal account to use all the features of the tool",
+    "titleLogin": "Hi, Welcome to VinoLink",
+    "subtitleLogin": "Register with your personal account to use all the features of the tool",
     "buttonRegister": "Sign Up"
   },
   "register": {
@@ -38,7 +38,7 @@
     "roleOptions": ["User", "Producer", "Provider"],
     "subtitle": "Password must have a minimum of 8 characters",
     "submit": "Sign Up",
-    "titleRegister": "Hi, welcome to VinoLink",
+    "titleRegister": "Hi, Welcome to Back!!",
     "options": "Enter your personal details to use all of the app features",
     "buttonLogin": "Sign In",
     "account": "or continue with"

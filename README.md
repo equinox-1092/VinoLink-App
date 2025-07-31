@@ -39,3 +39,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 npx shadcn@latest init
 npm install react-i18next i18next --save
 npm install react-icons --save
+npm install motion

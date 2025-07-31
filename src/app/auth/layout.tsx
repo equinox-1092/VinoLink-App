@@ -1,12 +1,6 @@
 import React from "react";
-import Register from "./register/page";
-import Login from "./login/page";
+import { AuthContainer } from "@/components/AuthContainer";
 
 export const AuthLayout = () => {
-  return (
-    <div>
-      <Login />
-      <Register />
-    </div>
-  );
+  return <AuthContainer />;
 };
