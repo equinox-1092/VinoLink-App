@@ -40,3 +40,4 @@ npx shadcn@latest init
 npm install react-i18next i18next --save
 npm install react-icons --save
 npm install motion
+npx shadcn@latest add https://ui.aceternity.com/registry/sidebar.json
