@@ -42,5 +42,19 @@
     "options": "Enter your personal details to use all of the app features",
     "buttonLogin": "Sign In",
     "account": "or continue with"
+  },
+  "batch-management": {
+    "title": "Batch Management",
+    "dashboard": {
+      "stage": "Stages of fermentation",
+      "analysis": "Quality analysis"
+    },
+    "subtitle": {
+      "fermentation": "Fermentation",
+      "quality": "Quality"
+    }
+  },
+  "button": {
+    "viewDetails": "All processes"
   }
 }

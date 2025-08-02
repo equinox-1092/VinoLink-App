@@ -42,5 +42,16 @@
     "options": "¿Ya tienes una cuenta?",
     "buttonLogin": "Iniciar sesión",
     "account": "o continuar con"
+  },
+  "batch-management": {
+    "title": "Gestión de lotes",
+    "dashboard": {
+      "stage": "Etapas de la fermentación",
+      "analysis": "Análisis de calidad"
+    },
+    "subtitle": {
+      "fermentation": "Fermentación",
+      "quality": "Calidad"
+    }
   }
 }

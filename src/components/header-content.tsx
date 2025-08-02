@@ -1,14 +1,20 @@
 "use client";
 
 import { usePathname } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
 
 export function HeaderContent() {
+  const { t } = useTranslation();
   const pathname = usePathname();
   
+
   // Función para formatear el nombre de la ruta
   const formatPageTitle = (path: string) => {
     // Si es la ruta raíz del dashboard
-    if (path === '/' || path === '/dashboard') return 'Dashboard';
+    if (path === '/' || path === '/dashboard') return "Dashboard";
+    
+    // Si es la ruta raíz del batch-management
+    if (path === '/batch-management') return t('batch-management.title');
     
     // Obtener el último segmento de la ruta
     const segments = path.split('/').filter(Boolean);

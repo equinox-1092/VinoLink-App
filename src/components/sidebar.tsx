@@ -1,10 +1,19 @@
 "use client";
-
-import { useState } from "react";
-import Image from "next/image";
-import { motion } from "motion/react";
-import { IconBrandTabler, IconUserBolt, IconSettings, IconArrowLeft } from "@tabler/icons-react";
+import React, { useState } from "react";
 import { Sidebar as SidebarWrapper, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
+import {
+  IconLayoutDashboard,
+  IconPackage,
+  IconTimelineEvent,
+  IconTruckDelivery,
+  IconReceipt2,
+  IconBellRinging,
+  IconChartBar,
+  IconSettings,
+  IconLogout
+} from "@tabler/icons-react";
+import { motion } from "motion/react";
+import { cn } from "@/lib/utils";
 
 // Asegúrate de que la ruta de la imagen sea correcta
 const avatarUrl = "https://assets.aceternity.com/manu.png";
@@ -15,28 +24,63 @@ export function Sidebar() {
       label: "Dashboard",
       href: "/dashboard",
       icon: (
-        <IconBrandTabler className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+        <IconLayoutDashboard className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
     {
       label: "Gestión de Lotes",
-      href: "#",
+      href: "/batch-management",
       icon: (
-        <IconUserBolt className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+        <IconPackage className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
     {
-      label: "Cuenta",
+      label: "Trazabilidad",
+      href: "/",
+      icon: (
+        <IconTimelineEvent className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Reaprovisionamiento",
+      href: "/",
+      icon: (
+        <IconTruckDelivery className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Órdenes de Venta",
+      href: "/",
+      icon: (
+        <IconReceipt2 className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Alertas & Notificaciones",
+      href: "/",
+      icon: (
+        <IconBellRinging className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Reportes & Análisis",
+      href: "/",
+      icon: (
+        <IconChartBar className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Configuración de Cuenta",
       href: "/account",
       icon: (
         <IconSettings className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
     {
-      label: "Logout",
-      href: "/auth/login",
+      label: "Cerrar Sesión",
+      href: "/",
       icon: (
-        <IconArrowLeft className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+        <IconLogout className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
   ];
@@ -74,24 +118,31 @@ export function Sidebar() {
   );
 }
 
-const Logo = () => (
-  <a
-    href="#"
-    className="relative z-20 flex items-center space-x-2 py-1 text-sm font-normal text-black"
-  >
-    <div className="h-5 w-6 shrink-0 rounded-tl-lg rounded-tr-sm rounded-br-lg rounded-bl-sm bg-black dark:bg-white" />
-    <motion.span
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="font-medium whitespace-pre text-black dark:text-white"
+export const Logo = () => {
+  return (
+    <a
+      href="#"
+      className="relative z-20 flex items-center space-x-2 py-1 text-sm font-normal text-black"
     >
-      Acet Labs
-    </motion.span>
-  </a>
-);
+      <div className="h-5 w-6 shrink-0 rounded-tl-lg rounded-tr-sm rounded-br-lg rounded-bl-sm bg-black dark:bg-white" />
+      <motion.span
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="font-medium whitespace-pre text-black dark:text-white"
+      >
+        Vino Link
+      </motion.span>
+    </a>
+  );
+};
 
-const LogoIcon = () => (
-  <a href="#" className="flex items-center justify-center py-1">
-    <div className="h-5 w-6 shrink-0 rounded-tl-lg rounded-tr-sm rounded-br-lg rounded-bl-sm bg-black dark:bg-white" />
-  </a>
-);
+export const LogoIcon = () => {
+  return (
+    <a
+      href="#"
+      className="relative z-20 flex items-center space-x-2 py-1 text-sm font-normal text-black"
+    >
+      <div className="h-5 w-6 shrink-0 rounded-tl-lg rounded-tr-sm rounded-br-lg rounded-bl-sm bg-black dark:bg-white" />
+    </a>
+  );
+};
