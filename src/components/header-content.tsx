@@ -30,6 +30,6 @@ export function HeaderContent() {
   const title = formatPageTitle(pathname);
 
   return (
-    <h1 className="text-2xl font-semibold mb-6">{title}</h1>
+    <h1 className="text-2xl font-semibold p-6 mb-6 ">{title}</h1>
   );
 }

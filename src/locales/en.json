@@ -50,8 +50,15 @@
       "analysis": "Quality analysis"
     },
     "subtitle": {
-      "fermentation": "Fermentation",
-      "quality": "Quality"
+      "harvest":"Harvest and Destemming",
+      "maceration":"Maceration",
+      "alcoholicFermentation":"Alcoholic Fermentation",
+      "malolacticFermentation":"Malolactic Fermentation",
+      "racking":"Racking and Aging",
+      "filtering":"Filtering and Stabilization"
+    },
+    "analysis": {
+      "title":"Quality analysis"
     }
   },
   "button": {
