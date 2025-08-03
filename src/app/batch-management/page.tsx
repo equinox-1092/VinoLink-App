@@ -3,7 +3,6 @@ import React from "react";
 import { HeaderContent } from "@/components/header-content";
 import { BatchGrafic } from "./batch-grafic/page";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/button";
 import {
   IconPlant2,
   IconDroplet,
@@ -11,10 +10,20 @@ import {
   IconOval,
   IconArrowsLeftRight,
   IconFilter,
+  IconCloudDownload,
+  IconCheck,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import { AnimatedSubscribeButton } from "@/components/magicui/animated-subscribe-button";
+import BatchTable from "./table/page";
+import { ButtonShow } from "@/components/button-show";
+import { useState } from "react";
+import { ShowDialog } from "@/components/showDialog";
+import FermentationPage from "./fermentation/page";
+
 export default function BatchManagement() {
   const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <HeaderContent />
@@ -40,11 +49,15 @@ export default function BatchManagement() {
                 </h2>
               </div>
               <div className="mt-4 self-end">
-                <Button>
-                  <Link href={"/batch-management/harvest"}>
-                    {t("button.viewDetails")}
-                  </Link>
-                </Button>
+                <ButtonShow onClick={() => setIsOpen(true)}>
+                  {t("button.viewDetails")}
+                </ButtonShow>
+                <ShowDialog
+                  isOpen={isOpen}
+                  onClose={() => setIsOpen(false)}
+                >
+                  <FermentationPage />
+                </ShowDialog>
               </div>
             </div>
             {/**Maceration */}
@@ -56,11 +69,11 @@ export default function BatchManagement() {
                 </h2>
               </div>
               <div className="mt-4 self-end">
-                <Button>
+                <ButtonShow>
                   <Link href={"/batch-management/maceration"}>
                     {t("button.viewDetails")}
                   </Link>
-                </Button>
+                </ButtonShow>
               </div>
             </div>
             {/**Alcoholic Fermentation */}
@@ -76,11 +89,11 @@ export default function BatchManagement() {
                 </h2>
               </div>
               <div className="mt-4 self-end">
-                <Button>
+                <ButtonShow>
                   <Link href={"/batch-management/alcoholic-fermentation"}>
                     {t("button.viewDetails")}
                   </Link>
-                </Button>
+                </ButtonShow>
               </div>
             </div>
             {/**Malolactic Fermentation */}
@@ -96,11 +109,11 @@ export default function BatchManagement() {
                 </h2>
               </div>
               <div className="mt-4 self-end">
-                <Button>
+                <ButtonShow>
                   <Link href={"/batch-management/malolactic-fermentation"}>
                     {t("button.viewDetails")}
                   </Link>
-                </Button>
+                </ButtonShow>
               </div>
             </div>
             {/**Racking and Aging*/}
@@ -116,11 +129,11 @@ export default function BatchManagement() {
                 </h2>
               </div>
               <div className="mt-4 self-end">
-                <Button>
+                <ButtonShow>
                   <Link href={"/batch-management/racking-and-aging"}>
                     {t("button.viewDetails")}
                   </Link>
-                </Button>
+                </ButtonShow>
               </div>
             </div>
             {/**Filtering and Stabilization */}
@@ -136,16 +149,17 @@ export default function BatchManagement() {
                 </h2>
               </div>
               <div className="mt-4 self-end">
-                <Button>
+                <ButtonShow>
                   <Link href={"/batch-management/filtering-and-stabilization"}>
                     {t("button.viewDetails")}
                   </Link>
-                </Button>
+                </ButtonShow>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/**Table and graphic */}
       <div className="px-2 mt-8">
         <div className="flex items-center justify-between p-8">
           <h1 className="text-xl font-semibold">
@@ -157,14 +171,30 @@ export default function BatchManagement() {
             <BatchGrafic />
           </div>
           <div className="bg-white rounded-lg shadow-sm p-4">
-            <h2 className="text-xl font-semibold mb-2">Alerts</h2>
-            <ul className="space-y-2">
-              <li className="text-red-600">⚠️ Temperatura alta en Lote A</li>
-              <li className="text-yellow-600">
-                ℹ️ Densidad estancada en Lote B
-              </li>
-              <li className="text-red-600">⚠️ pH fuera de rango en Lote C</li>
-            </ul>
+            <h2 className="text-xl font-semibold mb-2">
+              {t("batch-management.table.title")}
+            </h2>
+            <div className="flex items-center justify-between gap-2">
+              <select name="etapa" id="">
+                <option value="">{t("batch-management.table.stage")}</option>
+              </select>
+              <select name="lote" id="">
+                <option value="">{t("batch-management.table.batch")}</option>
+              </select>
+              <AnimatedSubscribeButton className="w-36">
+                <span className="group inline-flex items-center justify-center">
+                  <IconCloudDownload className="mr-2 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  {t("batch-management.table.download")}
+                </span>
+                <span className="group inline-flex items-center">
+                  <IconCheck className="mr-2 size-4" />
+                  {t("batch-management.table.download")}
+                </span>
+              </AnimatedSubscribeButton>
+            </div>
+            <div>
+              <BatchTable />
+            </div>
           </div>
         </div>
       </div>

@@ -42,3 +42,8 @@ npm install react-icons --save
 npm install motion
 npx shadcn@latest add https://ui.aceternity.com/registry/sidebar.json
 npm install echarts
+npx shadcn@latest add "https://magicui.design/r/animated-subscribe-button"
+npm install @heroui/table
+npm install heroui-cli -g
+npm install --save @heroui/react
+npm install @headlessui/react@latest

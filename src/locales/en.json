@@ -59,6 +59,20 @@
     },
     "analysis": {
       "title":"Quality analysis"
+    },
+    "table": {
+      "title": "PDF reports",
+      "subtitle": "Select the stage and batch to generate the report",
+      "stage":"Select stage",
+      "batch":"Select batch",
+      "download":"Download",
+      "tables":{
+        "name":"Name",
+        "status":"Status",
+        "dateStart":"Date Start",
+        "dateEnd":"Date End",
+        "actions":"Actions"
+      }
     }
   },
   "button": {
