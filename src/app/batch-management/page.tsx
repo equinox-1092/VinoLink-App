@@ -5,7 +5,6 @@ import { BatchGrafic } from "./batch-grafic/page";
 import { useTranslation } from "react-i18next";
 import {
   IconPlant2,
-  IconDroplet,
   IconFlask,
   IconOval,
   IconArrowsLeftRight,
@@ -13,17 +12,15 @@ import {
   IconCloudDownload,
   IconCheck,
 } from "@tabler/icons-react";
-import Link from "next/link";
 import { AnimatedSubscribeButton } from "@/components/magicui/animated-subscribe-button";
 import BatchTable from "./table/page";
-import { ButtonShow } from "@/components/button-show";
-import { useState } from "react";
-import { ShowDialog } from "@/components/showDialog";
-import FermentationPage from "./fermentation/page";
+import { BatchCard } from "@/components/BatchCard";
+import FermentationLayout from "./alcoholic-fermentation/layout";
+import HarvestLayout from "./harvest/layout";
+import MacerationLayout from "./maceration/layout";
 
 export default function BatchManagement() {
   const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <HeaderContent />
@@ -36,126 +33,84 @@ export default function BatchManagement() {
         {/**cards */}
         <div className="w-full px-4 sm:px-6 lg:px-8 p-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
-            {/**Harvest and Destemming */}
-            <div className="flex flex-col justify-between h-full p-4 border-l-4 border-blue-600 rounded-lg shadow-md hover:shadow-lg hover:shadow-gray-400 hover:scale-105 duration-200 transition-all ease-in-out cursor-pointer bg-white">
-              <div className="flex items-center justify-baseline space-x-2">
+            {/* Harvest and Destemming */}
+            <BatchCard
+              icon={
                 <IconPlant2
                   size={24}
                   stroke={1.5}
                   title="Harvest and Destemming"
                 />
-                <h2 className="text-lg font-medium">
-                  {t("batch-management.subtitle.harvest")}
-                </h2>
-              </div>
-              <div className="mt-4 self-end">
-                <ButtonShow onClick={() => setIsOpen(true)}>
-                  {t("button.viewDetails")}
-                </ButtonShow>
-                <ShowDialog
-                  isOpen={isOpen}
-                  onClose={() => setIsOpen(false)}
-                >
-                  <FermentationPage />
-                </ShowDialog>
-              </div>
-            </div>
-            {/**Maceration */}
-            <div className="flex flex-col justify-between h-full p-4 border-l-4 border-blue-600 rounded-lg shadow-md hover:shadow-lg hover:shadow-gray-400 hover:scale-105 duration-200 transition-all ease-in-out cursor-pointer bg-white">
-              <div className="flex items-center justify-baseline space-x-2">
-                <IconDroplet size={24} stroke={1.5} title="Maceration" />
-                <h2 className="text-lg font-medium">
-                  {t("batch-management.subtitle.maceration")}
-                </h2>
-              </div>
-              <div className="mt-4 self-end">
-                <ButtonShow>
-                  <Link href={"/batch-management/maceration"}>
-                    {t("button.viewDetails")}
-                  </Link>
-                </ButtonShow>
-              </div>
-            </div>
-            {/**Alcoholic Fermentation */}
-            <div className="flex flex-col justify-between h-full p-4 border-l-4 border-blue-600 rounded-lg shadow-md hover:shadow-lg hover:shadow-gray-400 hover:scale-105 duration-200 transition-all ease-in-out cursor-pointer bg-white">
-              <div className="flex items-center justify-baseline space-x-2">
+              }
+              title={t("batch-management.subtitle.harvest")}
+            >
+              <HarvestLayout />
+            </BatchCard>
+            {/* Maceration */}
+            <BatchCard
+              icon={
+                <IconPlant2
+                  size={24}
+                  stroke={1.5}
+                  title="Maceration"
+                />
+              }
+              title={t("batch-management.subtitle.maceration")}
+            >
+              <MacerationLayout />
+            </BatchCard>
+            {/* Alcoholic Fermentation */}
+            <BatchCard
+              icon={
                 <IconFlask
                   size={24}
                   stroke={1.5}
                   title="Alcoholic Fermentation"
                 />
-                <h2 className="text-lg font-medium">
-                  {t("batch-management.subtitle.alcoholicFermentation")}
-                </h2>
-              </div>
-              <div className="mt-4 self-end">
-                <ButtonShow>
-                  <Link href={"/batch-management/alcoholic-fermentation"}>
-                    {t("button.viewDetails")}
-                  </Link>
-                </ButtonShow>
-              </div>
-            </div>
-            {/**Malolactic Fermentation */}
-            <div className="flex flex-col justify-between h-full p-4 border-l-4 border-blue-600 rounded-lg shadow-md hover:shadow-lg hover:shadow-gray-400 hover:scale-105 duration-200 transition-all ease-in-out cursor-pointer bg-white">
-              <div className="flex items-center justify-baseline space-x-2">
+              }
+              title={t("batch-management.subtitle.alcoholicFermentation")}
+            >
+              <FermentationLayout />
+            </BatchCard>
+            {/* Malolactic Fermentation */}
+            <BatchCard
+              icon={
                 <IconOval
                   size={24}
                   stroke={1.5}
                   title="Malolactic Fermentation"
                 />
-                <h2 className="text-lg font-medium">
-                  {t("batch-management.subtitle.malolacticFermentation")}
-                </h2>
-              </div>
-              <div className="mt-4 self-end">
-                <ButtonShow>
-                  <Link href={"/batch-management/malolactic-fermentation"}>
-                    {t("button.viewDetails")}
-                  </Link>
-                </ButtonShow>
-              </div>
-            </div>
-            {/**Racking and Aging*/}
-            <div className="flex flex-col justify-between h-full p-4 border-l-4 border-blue-600 rounded-lg shadow-md hover:shadow-lg hover:shadow-gray-400 hover:scale-105 duration-200 transition-all ease-in-out cursor-pointer bg-white">
-              <div className="flex items-center justify-baseline space-x-2">
+              }
+              title={t("batch-management.subtitle.malolacticFermentation")}
+            >
+              <FermentationLayout />
+            </BatchCard>
+            {/* Racking and Aging */}
+            <BatchCard
+              icon={
                 <IconArrowsLeftRight
                   size={24}
                   stroke={1.5}
                   title="Racking and Aging"
                 />
-                <h2 className="text-lg font-medium">
-                  {t("batch-management.subtitle.racking")}
-                </h2>
-              </div>
-              <div className="mt-4 self-end">
-                <ButtonShow>
-                  <Link href={"/batch-management/racking-and-aging"}>
-                    {t("button.viewDetails")}
-                  </Link>
-                </ButtonShow>
-              </div>
-            </div>
-            {/**Filtering and Stabilization */}
-            <div className="flex flex-col justify-between h-full p-4 border-l-4 border-blue-600 rounded-lg shadow-md hover:shadow-lg hover:shadow-gray-400 hover:scale-105 duration-200 transition-all ease-in-out cursor-pointer bg-white">
-              <div className="flex items-center justify-baseline space-x-2">
+              }
+              title={t("batch-management.subtitle.racking")}
+            >
+              <FermentationLayout />
+            </BatchCard>
+            {/* Filtering and Stabilization */}
+            <BatchCard
+              icon={
                 <IconFilter
                   size={24}
                   stroke={1.5}
                   title="Filtering and Stabilization"
                 />
-                <h2 className="text-lg font-medium">
-                  {t("batch-management.subtitle.filtering")}
-                </h2>
-              </div>
-              <div className="mt-4 self-end">
-                <ButtonShow>
-                  <Link href={"/batch-management/filtering-and-stabilization"}>
-                    {t("button.viewDetails")}
-                  </Link>
-                </ButtonShow>
-              </div>
-            </div>
+              }
+              title={t("batch-management.subtitle.filtering")}
+            >
+              <FermentationLayout />
+            </BatchCard>
           </div>
         </div>
       </div>

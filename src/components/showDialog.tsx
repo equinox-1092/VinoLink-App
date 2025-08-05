@@ -42,14 +42,15 @@ export function ShowDialog({ isOpen, children, onClose }: ShowDialogProps) {
             leaveFrom="opacity-100 translate-y-0 scale-100"
             leaveTo="opacity-0 translate-y-4 scale-95"
           >
-            <div className="bg-white rounded-lg shadow-xl max-w-lg w-full p-6 mx-auto relative z-10">
+            <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-visible p-6 mx-auto relative z-10">
               <button
                 onClick={onClose}
-                className="absolute -top-3 -left-3 flex items-center space-x-1 p-2 text-gray-600 hover:text-gray-900 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 cursor-pointer"
                 aria-label="Cerrar"
+                className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-8 h-8 p-1.5 text-gray-600 hover:text-gray-900 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 z-50 cursor-pointer"
               >
                 <IconArrowLeft size={20} stroke={1.5} />
               </button>
+
               <div className="mt-4">{children}</div>
             </div>
           </Transition.Child>

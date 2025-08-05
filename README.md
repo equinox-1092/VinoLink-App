@@ -47,3 +47,4 @@ npm install @heroui/table
 npm install heroui-cli -g
 npm install --save @heroui/react
 npm install @headlessui/react@latest
+npx shadcn@latest add pagination

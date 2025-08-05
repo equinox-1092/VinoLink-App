@@ -8,6 +8,7 @@ type EChartsOption = echarts.EChartsOption;
 export function BatchGrafic() {
   const chartRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
+  
   useEffect(() => {
     if (!chartRef.current) return;
     const chart = echarts.init(chartRef.current);

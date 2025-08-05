@@ -50,32 +50,53 @@
       "analysis": "Quality analysis"
     },
     "subtitle": {
-      "harvest":"Harvest and Destemming",
-      "maceration":"Maceration",
-      "alcoholicFermentation":"Alcoholic Fermentation",
-      "malolacticFermentation":"Malolactic Fermentation",
-      "racking":"Racking and Aging",
-      "filtering":"Filtering and Stabilization"
+      "harvest": "Harvest and Destemming",
+      "maceration": "Maceration",
+      "alcoholicFermentation": "Alcoholic Fermentation",
+      "malolacticFermentation": "Malolactic Fermentation",
+      "racking": "Racking and Aging",
+      "filtering": "Filtering and Stabilization"
     },
     "analysis": {
-      "title":"Quality analysis"
+      "title": "Quality analysis"
     },
     "table": {
       "title": "PDF reports",
       "subtitle": "Select the stage and batch to generate the report",
-      "stage":"Select stage",
-      "batch":"Select batch",
-      "download":"Download",
-      "tables":{
-        "name":"Name",
-        "status":"Status",
-        "dateStart":"Date Start",
-        "dateEnd":"Date End",
-        "actions":"Actions"
+      "stage": "Select stage",
+      "batch": "Select batch",
+      "download": "Download",
+      "tables": {
+        "name": "Name",
+        "status": "Status",
+        "dateStart": "Date Start",
+        "dateStartMaceration": "Date Start",
+        "dateEnd": "Date End",
+        "actions": "Actions",
+        "harvestDate": "Harvest Date",
+        "grapeVariety": "Grape Variety",
+        "pH": "pH of the Must",
+        "responsibleOperator": "Responsible Operator",
+        "Temperature": "Temperature (°C)",
+        "Duration": "Duration (h)",
+        "Notes": "Notes"
       }
+    },
+    "fermentation": {
+      "title": "Alcoholic Fermentation",
+      "create": "Create"
+    },
+    "harvest": {
+      "title": "Harvest and Destemming",
+      "create": "Create"
+    },
+    "maceration": {
+      "title": "Maceration",
+      "create": "Create"
     }
   },
   "button": {
-    "viewDetails": "All processes"
+    "viewDetails": "All processes",
+    "search": "Search"
   }
 }
