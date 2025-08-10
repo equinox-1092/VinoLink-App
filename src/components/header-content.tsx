@@ -14,6 +14,7 @@ export function HeaderContent() {
 
     // Si es la ruta raíz del batch-management
     if (path === "/batch-management") return t("batch-management.title");
+    if (path === "/batch-management/harvest/create") return t("batch-management.harvestform.create");
 
     // Obtener el último segmento de la ruta
     const segments = path.split("/").filter(Boolean);

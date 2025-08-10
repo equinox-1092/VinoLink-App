@@ -18,6 +18,15 @@ import { BatchCard } from "@/components/BatchCard";
 import FermentationLayout from "./alcoholic-fermentation/layout";
 import HarvestLayout from "./harvest/layout";
 import MacerationLayout from "./maceration/layout";
+import MalolacticFermentationLayout from "./malolactic-fermentation/layout";
+import RackingLayout from "./racking/layout";
+import FilteringLayout from "./filtering/layout";
+import HarvestPage from "./harvest/page";
+import MacerationPage from "./maceration/page";
+import AlcoholicFermentationPage from "./alcoholic-fermentation/page";
+import MalolacticFermentationPage from "./malolactic-fermentation/page";
+import RackingPage from "./racking/page";
+import FilteringPage from "./filtering/page";
 
 export default function BatchManagement() {
   const { t } = useTranslation();
@@ -44,20 +53,18 @@ export default function BatchManagement() {
               }
               title={t("batch-management.subtitle.harvest")}
             >
-              <HarvestLayout />
+              <HarvestLayout>
+                <HarvestPage />
+              </HarvestLayout>
             </BatchCard>
             {/* Maceration */}
             <BatchCard
-              icon={
-                <IconPlant2
-                  size={24}
-                  stroke={1.5}
-                  title="Maceration"
-                />
-              }
+              icon={<IconPlant2 size={24} stroke={1.5} title="Maceration" />}
               title={t("batch-management.subtitle.maceration")}
             >
-              <MacerationLayout />
+              <MacerationLayout>
+                <MacerationPage />
+              </MacerationLayout>
             </BatchCard>
             {/* Alcoholic Fermentation */}
             <BatchCard
@@ -70,7 +77,9 @@ export default function BatchManagement() {
               }
               title={t("batch-management.subtitle.alcoholicFermentation")}
             >
-              <FermentationLayout />
+              <FermentationLayout>
+                <AlcoholicFermentationPage />
+              </FermentationLayout>
             </BatchCard>
             {/* Malolactic Fermentation */}
             <BatchCard
@@ -83,7 +92,9 @@ export default function BatchManagement() {
               }
               title={t("batch-management.subtitle.malolacticFermentation")}
             >
-              <FermentationLayout />
+              <MalolacticFermentationLayout>
+                <MalolacticFermentationPage />
+              </MalolacticFermentationLayout>
             </BatchCard>
             {/* Racking and Aging */}
             <BatchCard
@@ -96,7 +107,9 @@ export default function BatchManagement() {
               }
               title={t("batch-management.subtitle.racking")}
             >
-              <FermentationLayout />
+              <RackingLayout>
+                <RackingPage />
+              </RackingLayout>
             </BatchCard>
             {/* Filtering and Stabilization */}
             <BatchCard
@@ -109,7 +122,9 @@ export default function BatchManagement() {
               }
               title={t("batch-management.subtitle.filtering")}
             >
-              <FermentationLayout />
+              <FilteringLayout>
+                <FilteringPage />
+              </FilteringLayout>
             </BatchCard>
           </div>
         </div>

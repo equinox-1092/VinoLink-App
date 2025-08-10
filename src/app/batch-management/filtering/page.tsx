@@ -1,23 +1,21 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import FilteringTable from "./table/page";
 import { useRouter } from "next/navigation";
-import MacerationTable from "./table/page";
 
-export default function MacerationPage() {
+export default function FilteringPage() {
   const { t } = useTranslation();
-  const [search, setSearch] = React.useState("");
+  const [search, setSearch] = useState("");
   const router = useRouter();
   return (
     <div className="p-6 ">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-semibold">
-          {t("batch-management.maceration.title")}
+          {t("batch-management.filtering.title")}
         </h1>
-        <button
-          onClick={() => router.push("/batch-management/maceration/create")}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out"
-        >
-          {t("batch-management.maceration.create")}
+        <button onClick={() => router.push("/batch-management/filtering/create")} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
+          {t("batch-management.filtering.create")}
         </button>
       </div>
       {/**filtrado de opciones */}
@@ -34,7 +32,7 @@ export default function MacerationPage() {
         </button>
       </div>
       <div className="mt-6 w-full">
-        <MacerationTable search={search} />
+        <FilteringTable search={search} />
       </div>
     </div>
   );

@@ -35,6 +35,45 @@ export const columnsMaceration = (t: TFunction): Column<UserType>[] => [
   { name: t("batch-management.table.tables.actions"), uid: "actions" },
 ];
 
+export const columnsMalolacticFermentation = (t: TFunction): Column<UserType>[] => [
+  { name: t("batch-management.table.tables.name"), uid: "name" },
+  { name: t("batch-management.table.tables.status"), uid: "status" },
+  { name: t("batch-management.table.tables.StartDayMLF"), uid: "dateStartMalolactic" },
+  { name: t("batch-management.table.tables.EndDayMLF"), uid: "dateEndMalelactic" },
+  { name: t("batch-management.table.tables.DurationDays"), uid: "durationDays" },
+  { name: t("batch-management.table.tables.responsibleOperator"), uid: "responsibleOperator" },
+  { name: t("batch-management.table.tables.Temperature"), uid: "temperature" },
+  { name: t("batch-management.table.tables.Notes"), uid: "notes" },
+  { name: t("batch-management.table.tables.actions"), uid: "actions" },
+];
+
+export const columnsRacking = (t: TFunction): Column<UserType>[] => [
+  { name: t("batch-management.table.tables.name"), uid: "name" },
+  { name: t("batch-management.table.tables.status"), uid: "status" },
+  { name: t("batch-management.table.tables.RackingDate"), uid: "RackingDate" },
+  { name: t("batch-management.table.tables.VolumeTransferred"), uid: "VolumeTransferred" },
+  { name: t("batch-management.table.tables.AgingType"), uid: "AgingType" },
+  { name: t("batch-management.table.tables.AgingTime"), uid: "AgingTime" },
+  { name: t("batch-management.table.tables.Humidity"), uid: "Humidity" },
+  { name: t("batch-management.table.tables.responsibleOperator"), uid: "responsibleOperator" },
+  { name: t("batch-management.table.tables.Notes"), uid: "notes" },
+  { name: t("batch-management.table.tables.actions"), uid: "actions" },
+];
+
+export const columnsFiltering = (t: TFunction): Column<UserType>[] => [
+  { name: t("batch-management.table.tables.name"), uid: "name" },
+  { name: t("batch-management.table.tables.status"), uid: "status" },
+  { name: t("batch-management.table.tables.FiltrationDate"), uid: "FiltrationDate" },
+  { name: t("batch-management.table.tables.FilterType"), uid: "FilterType" },
+  { name: t("batch-management.table.tables.PoreSize"), uid: "PoreSize" },
+  { name: t("batch-management.table.tables.FilterPressure"), uid: "FilterPressure" },
+  { name: t("batch-management.table.tables.CloggingAgent"), uid: "CloggingAgent" },
+  { name: t("batch-management.table.tables.StabilizationMethod"), uid: "StabilizationMethod" },
+  { name: t("batch-management.table.tables.StabilizationTemperature"), uid: "StabilizationTemperature" },
+  { name: t("batch-management.table.tables.Notes"), uid: "notes" },
+  { name: t("batch-management.table.tables.actions"), uid: "actions" },
+];
+
 export interface UserType {
   id: number;
   name: string;
@@ -51,6 +90,21 @@ export interface UserType {
   dateStartMaceration: string;
   temperature: string;
   duration: string;
+  dateStartMalolactic: string;
+  dateEndMalelactic: string;
+  durationDays: string;
+  RackingDate: string;
+  VolumeTransferred: string;
+  AgingType: string;
+  AgingTime: string;
+  Humidity: string;
+  FiltrationDate: string;
+  FilterType: string;
+  PoreSize: string;
+  FilterPressure: string;
+  CloggingAgent: string;
+  StabilizationMethod: string;
+  StabilizationTemperature: string;
 }
 
 export const users: UserType[] = [
@@ -70,6 +124,21 @@ export const users: UserType[] = [
     dateStartMaceration: "2022-01-01",
     temperature: "Temperature",
     duration: "Duration",
+    dateStartMalolactic: "2022-01-01",
+    dateEndMalelactic: "2022-01-01",
+    durationDays: "Duration",
+    RackingDate: "2022-01-01",
+    VolumeTransferred: "Volume Transferred",
+    AgingType: "Aging Type",
+    AgingTime: "Aging Time",
+    Humidity: "Humidity",
+    FiltrationDate: "2022-01-01",
+    FilterType: "Filter Type",
+    PoreSize: "Pore Size",
+    FilterPressure: "Filter Pressure",
+    CloggingAgent: "Clogging Agent",
+    StabilizationMethod: "Stabilization Method",
+    StabilizationTemperature: "Stabilization Temperature",
   },
   {
     id: 2,
@@ -87,6 +156,21 @@ export const users: UserType[] = [
     dateStartMaceration: "2022-01-01",
     temperature: "Temperature",
     duration: "Duration",
+    dateStartMalolactic: "2022-01-01",
+    dateEndMalelactic: "2022-01-01",
+    durationDays: "Duration",
+    RackingDate: "2022-01-01",
+    VolumeTransferred: "Volume Transferred",
+    AgingType: "Aging Type",
+    AgingTime: "Aging Time",
+    Humidity: "Humidity",
+    FiltrationDate: "2022-01-01",
+    FilterType: "Filter Type",
+    PoreSize: "Pore Size",
+    FilterPressure: "Filter Pressure",
+    CloggingAgent: "Clogging Agent",
+    StabilizationMethod: "Stabilization Method",
+    StabilizationTemperature: "Stabilization Temperature",
   },
   {
     id: 3,
@@ -104,6 +188,21 @@ export const users: UserType[] = [
     dateStartMaceration: "2022-01-01",
     temperature: "Temperature",
     duration: "Duration",
+    dateStartMalolactic: "2022-01-01",
+    dateEndMalelactic: "2022-01-01",
+    durationDays: "Duration",
+    RackingDate: "2022-01-01",
+    VolumeTransferred: "Volume Transferred",
+    AgingType: "Aging Type",
+    AgingTime: "Aging Time",
+    Humidity: "Humidity",
+    FiltrationDate: "2022-01-01",
+    FilterType: "Filter Type",
+    PoreSize: "Pore Size",
+    FilterPressure: "Filter Pressure",
+    CloggingAgent: "Clogging Agent",
+    StabilizationMethod: "Stabilization Method",
+    StabilizationTemperature: "Stabilization Temperature",
   },
   {
     id: 4,
@@ -121,6 +220,21 @@ export const users: UserType[] = [
     dateStartMaceration: "2022-01-01",
     temperature: "Temperature",
     duration: "Duration",
+    dateStartMalolactic: "2022-01-01",
+    dateEndMalelactic: "2022-01-01",
+    durationDays: "Duration",
+    RackingDate: "2022-01-01",
+    VolumeTransferred: "Volume Transferred",
+    AgingType: "Aging Type",
+    AgingTime: "Aging Time",
+    Humidity: "Humidity",
+    FiltrationDate: "2022-01-01",
+    FilterType: "Filter Type",
+    PoreSize: "Pore Size",
+    FilterPressure: "Filter Pressure",
+    CloggingAgent: "Clogging Agent",
+    StabilizationMethod: "Stabilization Method",
+    StabilizationTemperature: "Stabilization Temperature",
   },
   {
     id: 5,
@@ -138,6 +252,21 @@ export const users: UserType[] = [
     dateStartMaceration: "2022-01-01",
     temperature: "Temperature",
     duration: "Duration",
+    dateStartMalolactic: "2022-01-01",
+    dateEndMalelactic: "2022-01-01",
+    durationDays: "Duration",
+    RackingDate: "2022-01-01",
+    VolumeTransferred: "Volume Transferred",
+    AgingType: "Aging Type",
+    AgingTime: "Aging Time",
+    Humidity: "Humidity",
+    FiltrationDate: "2022-01-01",
+    FilterType: "Filter Type",
+    PoreSize: "Pore Size",
+    FilterPressure: "Filter Pressure",
+    CloggingAgent: "Clogging Agent",
+    StabilizationMethod: "Stabilization Method",
+    StabilizationTemperature: "Stabilization Temperature",
   },
   {
     id: 6,
@@ -155,7 +284,22 @@ export const users: UserType[] = [
     dateStartMaceration: "2022-01-01",
     temperature: "Temperature",
     duration: "Duration",
-  },
+    dateStartMalolactic: "2022-01-01",
+    dateEndMalelactic: "2022-01-01",
+    durationDays: "Duration",
+    RackingDate: "2022-01-01",
+    VolumeTransferred: "Volume Transferred",
+    AgingType: "Aging Type",
+    AgingTime: "Aging Time",
+    Humidity: "Humidity",
+    FiltrationDate: "2022-01-01",
+    FilterType: "Filter Type",
+    PoreSize: "Pore Size",
+    FilterPressure: "Filter Pressure",
+    CloggingAgent: "Clogging Agent",
+    StabilizationMethod: "Stabilization Method",
+    StabilizationTemperature: "Stabilization Temperature",
+    },
   {
     id: 7,
     name: "Kristen Copper",
@@ -172,8 +316,24 @@ export const users: UserType[] = [
     dateStartMaceration: "2022-01-01",
     temperature: "Temperature",
     duration: "Duration",
+    dateStartMalolactic: "2022-01-01",
+    dateEndMalelactic: "2022-01-01",
+    durationDays: "Duration",
+    RackingDate: "2022-01-01",
+    VolumeTransferred: "Volume Transferred",
+    AgingType: "Aging Type",
+    AgingTime: "Aging Time",
+    Humidity: "Humidity",
+    FiltrationDate: "2022-01-01",
+    FilterType: "Filter Type",
+    PoreSize: "Pore Size",
+    FilterPressure: "Filter Pressure",
+    CloggingAgent: "Clogging Agent",
+    StabilizationMethod: "Stabilization Method",
+    StabilizationTemperature: "Stabilization Temperature",
   }
 ];
+
 
 
 

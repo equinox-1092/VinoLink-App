@@ -45,6 +45,9 @@
   },
   "batch-management": {
     "title": "Batch Management",
+    "harvestform": {
+      "create": "Create Harvest"
+    },
     "dashboard": {
       "stage": "Stages of fermentation",
       "analysis": "Quality analysis"
@@ -79,24 +82,117 @@
         "responsibleOperator": "Responsible Operator",
         "Temperature": "Temperature (°C)",
         "Duration": "Duration (h)",
-        "Notes": "Notes"
+        "Notes": "Notes",
+        "DurationDays": "Duration (días)",
+        "StartDayMLF": "Start Day MLF",
+        "EndDayMLF": "End Day MLF",
+        "RackingDate": "Racking Date",
+        "VolumeTransferred": "Volume Transferred",
+        "AgingType": "Aging Type",
+        "AgingTime": "Aging Time",
+        "Humidity": "Humidity (%)",
+        "FiltrationDate": "Filtration Date",
+        "FilterType": "Filter Type",
+        "PoreSize": "Pore Size (µm)",
+        "FilterPressure": "Filter Pressure (bar)",
+        "CloggingAgent": "Clogging Agent",
+        "StabilizationMethod": "Stabilization Method",
+        "StabilizationTemperature": "Stabilization Temperature (°C)"
       }
     },
     "fermentation": {
       "title": "Alcoholic Fermentation",
-      "create": "Create"
+      "create": "Create",
+      "createTitle": "Create Alcoholic Fermentation",
+      "form": {
+        "name": "Alcoholic Fermentation Name",
+        "dateStart": "Date Start",
+        "dateEnd": "Date End",
+        "responsibleOperator": "Responsible Operator",
+        "notes": "Notes"
+      }
     },
     "harvest": {
       "title": "Harvest and Destemming",
-      "create": "Create"
+      "create": "Create",
+      "createTitle": "Create Harvest",
+      "form": {
+        "name": "Harvest Name",
+        "harvestDate": "Harvest Date",
+        "grapeVariety": "Grape Variety",
+        "pH": "pH of the Must",
+        "responsibleOperator": "Responsible Operator",
+        "notes": "Notes"
+      }
     },
     "maceration": {
       "title": "Maceration",
-      "create": "Create"
+      "create": "Create",
+      "createTitle": "Create Maceration",
+      "form": {
+        "name": "Maceration Name",
+        "dateStartMaceration": "Date Start",
+        "Temperature": "Temperature (°C)",
+        "Duration": "Duration (h)",
+        "responsibleOperator": "Responsible Operator",
+        "notes": "Notes"
+      }
+    },
+    "malolacticFermentation": {
+      "title": "Malolactic Fermentation",
+      "create": "Create",
+      "createTitle": "Create Malolactic Fermentation",
+      "form": {
+        "name": "Malolactic Fermentation Name",
+        "StartDayMLF": "Start Day MLF",
+        "EndDayMLF": "End Day MLF",
+        "DurationDays": "Duration (days)",
+        "Temperature": "Temperature (°C)",
+        "responsibleOperator": "Responsible Operator",
+        "notes": "Notes"
+      }
+    },
+    "racking": {
+      "title": "Racking and Aging",
+      "create": "Create",
+      "createTitle": "Create Racking",
+      "form": {
+        "name": "Racking Name",
+        "RackingDate": "Racking Date",
+        "VolumeTransferred": "Volume Transferred",
+        "AgingType": "Aging Type",
+        "AgingTime": "Aging Time",
+        "Humidity": "Humidity (%)",
+        "responsibleOperator": "Responsible Operator",
+        "notes": "Notes"
+      }
+    },
+    "filtering": {
+      "title": "Filtering and Stabilization",
+      "create": "Create",
+      "createTitle": "Create Filtering",
+      "form": {
+        "name": "Filtering Name",
+        "FiltrationDate": "Filtration Date",
+        "FilterType": "Filter Type",
+        "PoreSize": "Pore Size (µm)",
+        "FilterPressure": "Filter Pressure (bar)",
+        "CloggingAgent": "Clogging Agent",
+        "StabilizationMethod": "Stabilization Method",
+        "StabilizationTemperature": "Stabilization Temperature (°C)",
+        "notes": "Notes"
+      }
     }
   },
   "button": {
     "viewDetails": "All processes",
-    "search": "Search"
+    "search": "Search",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  },
+  "upload": {
+    "subtitle": "Drag images here or click to select",
+    "deleteAll": "Delete All",
+    "add": "Add"
   }
 }
