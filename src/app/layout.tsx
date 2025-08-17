@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '@/i18n/config';
 import "./globals.css";
+import { inter } from '@/app/fonts';
 
 const SITE_METADATA = {
   title: "VinoLink",
@@ -35,7 +36,7 @@ export default function RootLayout({
   const lang = getLanguageFromPath();
   
   return (
-    <html lang={lang}>
+    <html lang={lang} className={inter.className}>
       <head>
         <title>{SITE_METADATA.title}</title>
         <meta name="description" content={SITE_METADATA.description} />

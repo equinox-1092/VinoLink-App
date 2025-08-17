@@ -259,36 +259,53 @@ export default function HarvestCreatePage() {
                       {t("upload.subtitle")}
                     </p>
                     <p className="text-xs text-muted-foreground">
-                      Arrastra archivos aquí o haz clic para seleccionar
-                    </p>
-                    <p className="text-xs text-muted-foreground">
                       PNG, JPG, WebP, JPEG (máx. 5MB)
                     </p>
                   </div>
                 </label>
               ) : (
                 <div className="space-y-4">
-                  <div className="grid grid-cols-3 gap-3">
-                    {previewImages.slice(0, 3).map((image) => (
-                      <ImagePreviewItem
-                        key={image.id}
-                        image={image}
-                        onRemove={removeImage}
-                      />
-                    ))}
-                    {previewImages.length < 6 && (
-                      <div
-                        className="aspect-square border-2 border-dashed border-border rounded-lg flex items-center justify-center cursor-pointer hover:bg-accent/50 transition-colors"
-                        onClick={openFileDialog}
-                      >
-                        <div className="text-center p-2">
-                          <PlusIcon className="h-5 w-5 text-muted-foreground mx-auto mb-1" />
-                          <span className="text-xs text-muted-foreground">
-                            {t("upload.add")}
-                          </span>
+                  <div className="space-y-2">
+                    <noscript>
+                      <p>Arrastra archivos aquí o haz clic para seleccionar</p>
+                    </noscript>
+                    
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                      {previewImages.length === 0 ? (
+                        <div 
+                          onClick={openFileDialog}
+                          className="aspect-square border-2 border-dashed rounded-lg flex items-center justify-center hover:bg-accent/50 transition-colors cursor-pointer"
+                        >
+                          <PlusIcon className="h-6 w-6 text-muted-foreground" />
                         </div>
-                      </div>
-                    )}
+                      ) : (
+                        <>
+                          {previewImages.map((image) => (
+                            <ImagePreviewItem
+                              key={image.id}
+                              image={image}
+                              onRemove={removeImage}
+                            />
+                          ))}
+                          {previewImages.length < 6 && (
+                            <div 
+                              onClick={openFileDialog}
+                              className="aspect-square border-2 border-dashed rounded-lg flex items-center justify-center hover:bg-accent/50 transition-colors cursor-pointer"
+                            >
+                              <PlusIcon className="h-6 w-6 text-muted-foreground" />
+                            </div>
+                          )}
+                        </>
+                      )}
+                      <input
+                        type="file"
+                        ref={inputRef}
+                        accept={accept}
+                        onChange={handleFileInputChange}
+                        className="hidden"
+                        multiple
+                      />
+                    </div>
                   </div>
 
                   {previewImages.length > 3 && (

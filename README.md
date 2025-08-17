@@ -30,23 +30,6 @@ VinoLink is a comprehensive wine management platform that connects wine lovers w
   - Magic UI components
   - Custom shadcn components
 
-## Install dependencies
-```bash
-- npx shadcn@latest init
-- npm install react-i18next i18next --save
-- npm install react-icons --save
-- npm install motion
-- npx shadcn@latest add https://ui.aceternity.com/registry/sidebar.json
-- npm install echarts
-- npx shadcn@latest add "https://magicui.design/r/animated-subscribe-button"
-- npm install @heroui/table
-- npm install heroui-cli -g
-- npm install --save @heroui/react
-- npm install @headlessui/react@latest
-- npx shadcn@latest add pagination
-- npx shadcn@latest add "https://magicui.design/r/ripple-button"
-```
-
 ## Getting Started
 
 First, run the development server:
@@ -80,6 +63,20 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
    npm install
    # or
    yarn
+
+   - npx shadcn@latest init
+   - npm install react-i18next i18next --save
+   - npm install react-icons --save
+   - npm install motion
+   - npx shadcn@latest add https://ui.aceternity.com/registry/sidebar.json
+   - npm install echarts
+   - npx shadcn@latest add "https://magicui.design/r/animated-subscribe-button"
+   - npm install @heroui/table
+   - npm install heroui-cli -g
+   - npm install --save @heroui/react
+   - npm install @headlessui/react@latest
+   - npx shadcn@latest add pagination
+   - npx shadcn@latest add "https://magicui.design/r/ripple-button"
    ```
 
 3. Set up environment variables
